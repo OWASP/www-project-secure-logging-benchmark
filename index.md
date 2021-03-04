@@ -4,7 +4,7 @@ layout: col-sidebar
 title: OWASP Secure Logging Benchmark
 tags: logging standard and benchmark
 level: 2
-type: Secure Logging Benchmarking 
+type: Tool
 pitch: A standardised approach to benhmarking and logging practises for developers.
 
 
