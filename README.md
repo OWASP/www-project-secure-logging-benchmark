@@ -1,58 +1,12 @@
-# www-project-secure-logging-benchmark
-OWASP Secure Logging Benchmark and Standard
+The home of the OWASP Secure Logging Benchmark project which can be found
+at: [www-project-secure-logging-benchmark](https://owasp.org/www-project-secure-logging-benchmark/).
 
-
-Logging and monitoring is often an after thought, or something that is built by developer for developers. This project moved the mindset of the Developer from measuring system and preformance metrics or debugging towards logging holistically. This project is a movement more than it is a standard. Logs give insights into code quality and bad logs can be a symptom of bad code. This project contains training material and approached to move your logs to build in security and forensics capabillities within the development cycle. This project will cover a varienty of things to consider within designing the logging that is best for your application. It includes a Benchmarking tool which is still in development to rate your logs in terms of maturity in terms of system monitoring, performance metrics, forensic information and even deductables for sensitive data disclosure. The aim is to empower developers to better develop logs with future breaches in mind. This is not a silver bullet but a tool to guiding how you think and approach logs.
-
-**There are five philosophies in designing logs**
-
-TL;DR: Your logs should be simple, and structured, they should also contain enough information without disclosing sensitive data. Often accidental information disclosure within the logs can lead to future breaches.
-
-**1. The first philosophy: Keep it simple, structured, and detailed enough**
-
-The first part of our first key philosophy when looking at how logs are designed is whether one can get an idea of what they contain with just a quick read. We often deal with situations where log-files are overly complex and become a dumping ground for print bodies. The logs should not be seen as a cache of information. It should rather be seen as a source of information that is simplified to only contain that which is necessary. This means that thought should be given to how effective it might be just to print the body of text within your logs. Another thing to consider is log levels and what your developers define them as. It is important to have a single definition for these. Something that follows rather closely on this is having your logs in a structured format. This means that all messages written to your log will be the same regardless of who the developer was that wrote that particular piece of code. As an organisation you need to plan the format of your output and structure your logs should have. You should consider in this the following:
-
-Are these logs going to be used for enrichment purposes within a SIEM solution, this might play a big role into the output and design structure of your logs. 
-What is the purpose of the events you choose to monitor, are they more related to debugging, error handling, security events or future forensic incidents, or even system performance measurements? (It might be a good idea to figure it out before you just log all the things.)
-
-**2. The second philosophy: Keep it tagged. Create metadata and use it**
-
-This is about the developer considering the fact that the data that their application deals with. Some data elements, such as PHI (personal health data) and PII (personally identifiable information), are probably inappropriate for application logs. There might even be better ways of structuring your data to tag it appropriately. An organisation should be aware of the data that they retain or have access to and as such have a set definition of what these levels might be. There are many things to consider – including whether you should have the information at all or perhaps simply reconsidering how you print your log statements to deal with these types of data. A way to build in appropriate measures is to be in a position to tag your data strings. There are many ways to do it but I feel that this one from the Apple developer documentation explains it well. Have your data privacy levels set by determining what information should be printed in logs.
-
-// Make the smoothie name visible because it’s not sensitive data.
-
-Logger().info(“Smoothie name: \(smoothieName, privacy: .public)”)
-
-Generating Log Messages from Your Code | Apple Developer Documentation
-
-When you know a variable contains potentially sensitive user information, mark it as secret explicitly, as shown in the following simple example:
-
-let userPassw : Str = getUserPassw()
-
-// Hide the user’s password.
-
-Logger().info(“User’s Password: \(userPassw, privacy: .secret)”)
-
-Building in the controls required to identify what type of information your variables may contain gives you the power to set the rules about when they are or can be, disclosed. Obviously, there is information that you would need in debug situations and for that, you would use a debug log and only log this sensitive information or error when in debug mode. A good rule of thumb is that if your logs reside on a local device outside of your control then they should not contain data that you would not want to be public. Do not be caught unaware of potentially sensitive information appearing in your logs which, at a later stage, is used against you. 
-
-**3. The third philosophy: Keep it clean and focussed**
-
-Logs have a way of growing over time, and this fact often gets ignored. However, those same logs are only ever reviewed when something goes wrong. Logging is a by-product of features, and so as features are added the logs generated by those features will grow: they grow with the application. This means that, like the other technical debt incurred as part of expanding applications, you will accumulate useless logs or logging debt. This is a real thing. It means your logs have turned into a sea of useless information, that has no real value. Logging should be something that is considered and cleaned as an application grows. This is also something that should be considered as part of a sprint cycle – time to deal with the gremlins that pop up along the way. Shooting a moving target is much harder than perhaps keeping it simple, structured, and clean. Uncle Bob states that we should aim for clean code, I would like to take these wise words and take them a step further. “Clean code produces clean logs”. Logs can save you or doom you. Test your logs by means of benchmarking them regularly. These tests could be part of unit testing or, at the very least, a part of quality assurance during mainline merges. It is something we should all be doing at regular intervals. 
-
-**4. The fourth philosophy: Assume that at some point you will suffer a compromise; log accordingly**
-
-This is not often considered by anyone outside of the security teams, and often not even by them. It should be said that at some point an application and organisation will most likely suffer a compromise. Whether this is sensitive data that is disclosed or actual unauthorised access. If (when) this happens, logs can be your friend. Well, they certainly are friends to those who have to read them to determine how the compromise occurred or whether it even did. So be kind to your future Incident Responder. This means that you should not, as a developer, just build your logs for debugging, system performance, and metrics. You should consider building security and forensic readiness within these logs. Logs contain a wealth of information on what happens to an application or on a device. 
-
-I live by one philosophy, if we do not have it we should aim to build it. When conducting threat modeling and identifying specific areas where there are risks, perhaps consider making the logging around some of the controls put in place more robust. I have examined many logs across many platforms and have often found that status or system checks or even object auditing overwhelm and overwrite valuable information. Consider logging some of the normal behavior only on change and by exception. You should be far more concerned with logging when things go wrong. Logging can become expensive as data pools can be large to store. Therefore consider how you build in the needed information. If your application is vulnerable in terms of injection attacks perhaps consider building additional logging control to identify when there is a non-favorable behavior across that portion of the application. You will be breached and you will disclose data, but you can build in the capabilities to detect these faster before you have egg on your face and chaos around you. Build your logs to obtain actionable information, that indicates when your vulnerable areas are not behaving properly. Know what behavior is normal in your environment, to be in a position to identify what could be evil.
-
-**5. The fifth (and final) philosophy: Consider who has access to the logs, how they are stored, and how they are transported.**
-
-Ultimately trust no device, no system, and no method of transmission. In multiple breaches I have dealt with there has been an unreasonable amount of trust placed in the “fact” that devices can be trusted – to some degree, this being said applications that run on physical devices must (usually) retain logs in some way or form on the local device. This is something that in forensics we are familiar with, the Locard exchange principle. Often if that device is a user’s mobile device or laptop, the organisation that developed the application does not have control over that device and its storage. There should never be any information in the logs that can be used to derive additional information about how the application functions, authenticates, or endpoints it communicates with. Consider this as having an asset behind enemy lines. This information has to cross multiple trust barriers and ultimately would be hopefully ingested into a central data lake. The question I always consider is, should we still just trust that the data can contain sensitive information because it’s stored on our data lake within our control? The simple answer is no, logs should contain enough information, to debug, to point to additional sources of information and what potentially occurred. It should not contain all the elements that may be considered sensitive. Could there be pointers to additional places the same information could be found, that makes it a little harder. In actual fact, even developers or security should not have access to sensitive data either. Many breaches occur because we assign a high level of trust to internal services and members of the organisations. Many breaches occur from within, not necessarily from outside. Logs contain valuable information that an attacker might want to have access to. 
-
-These are by no means the only things to consider, and I could potentially write a book or two about my thoughts. I have dealt with teams who have suffered a compromise and had sensitive data disclosures. In my experience I have almost always used the logs, they can contain so much information or they can contain equal amounts of noise. I am on a crusade, to turn developers into ninja forensic coding logging forces of nature. I would like to deal with breaches in which care has been taken with the logs they produce, and not always mumble to my “It would have been nice to have better logs or any logs for that matter”. It is easy to ask yourself the question as a developer. Do you take into account that your application will be breached, do you have enough information to determine what happened?” If you answered “I do not know” or “No”. Reach out to me I would like to set you on the path of building forensic and breach readiness into your application logs.
-
-A special thanks to Eric, who debated these with me. Also, all the wizards and developers guided me on this path.
-
-Special books that inspired my thinking were the Unicorn Project and the Phoenix Project.
-
-This article was first published on my website, and there is more on this at a later stage.
+Logging and monitoring is often an afterthought, or something that is built by developer for developers. This project
+moved the mindset of the Developer from measuring system and preformance metrics or debugging towards logging
+holistically. This project is a movement more than it is a standard. Logs give insights into code quality and bad logs
+can be a symptom of bad code. This project contains training material and approached to move your logs to build in
+security and forensics capabillities within the development cycle. This project will cover a varienty of things to
+consider within designing the logging that is best for your application. It includes a Benchmarking tool which is still
+in development to rate your logs in terms of maturity in terms of system monitoring, performance metrics, forensic
+information and even deductables for sensitive data disclosure. The aim is to empower developers to better develop logs
+with future breaches in mind. This is not a silver bullet but a tool to guiding how you think and approach logs.
