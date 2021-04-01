@@ -3,7 +3,7 @@ title: Status Update
 layout:  null
 tab: true
 order: 1
-tags: Update
+tags: update
 ---
 
 ## Update 04 March 2020
