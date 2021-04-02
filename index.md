@@ -13,11 +13,11 @@ type: documentation
 ## Introduction:
 
 The information that is often written in the log may be sensitive in nature or give an attacker access to low-hanging
-fruit in terms of exposure of endpoints or other sensitive information. The OWASP in the Top 10 refers to “Sensitive
+fruit in terms of exposure of endpoints or other sensitive information. The OWASP in the Top 10 refers to "Sensitive
 Data Exposure" as one of the risk factors for any application. Logging of information can be beneficial but this is
 often a double ended sword. Developers design logs with debugging in mind. Application logs are designed by developers
 for developers. There are important components to have a secure standard of logging. There is great power within logging
-and taking into account designing your logs with future breaches in mind. “When nothing goes right, just go left". The
+and taking into account designing your logs with future breaches in mind. "When nothing goes right, just go left". The
 process of detecting or dealing with an incident relies heavily on having the information built into the application
 logs prior to an incident occurring. The biggest pitfall of dealing with a potential breach is that your logging is
 verbose and critical data is lost between the noise or logs are overwritten. Another extreme is that the information
