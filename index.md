@@ -2,6 +2,7 @@
 
 layout: col-sidebar 
 title: OWASP Secure Logging Benchmark 
+site_side: true
 tags: logging-benchmark logging monitoring forensics dfir
 project: true 
 level: 2 
@@ -41,4 +42,6 @@ system performance.
 1. Two weeks of training material that you can use to populate logging hygiene backlogs items to address within sprints.
 1. A guide on how to apply this within your application security team.
 
-This project is a movement more than it is a standard. Logs are for more than just debugging and system metrics. They give insights into code quality and can be a symptom of problems within development teams. They are crucial to understanding a breach, mitigation against breaches and information gathering for threat modeling.
+This project is a movement more than it is a standard. Logs are for more than just debugging and system metrics. They
+give insights into code quality and can be a symptom of problems within development teams. They are crucial to
+understanding a breach, mitigation against breaches and information gathering for threat modeling.
