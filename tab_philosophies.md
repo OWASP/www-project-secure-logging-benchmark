@@ -40,7 +40,7 @@ printed in logs.
 
     // Make the smoothie name visible because it’s not sensitive data.
     
-    Logger().info(“Smoothie name: \(smoothieName, privacy: .public)”)
+    Logger().info("Smoothie name: \(smoothieName, privacy: .public)")
 
 Generating Log Messages from Your Code | Apple Developer Documentation
 
@@ -51,7 +51,7 @@ following simple example:
     
     // Hide the user’s password.
     
-    Logger().info(“User’s Password: \(userPassw, privacy: .secret)”)
+    Logger().info("User’s Password: \(userPassw, privacy: .secret)")
 
 Building in the controls required to identify what type of information your variables may contain gives you the power to
 set the rules about when they are or can be, disclosed. Obviously, there is information that you would need in debug
@@ -127,6 +127,6 @@ readiness into your application logs.
 
 A special thanks to Eric, who debated these with me. Also, all the wizards and developers guided me on this path.
 
-Special books that inspired my thinking were the Unicorn Project and the Phoenix Project.
+Special books that inspired my thinking were the Unicorn Project, and the Phoenix Project.
 
 This article was first published on my website, and there is more on this at a later stage.
