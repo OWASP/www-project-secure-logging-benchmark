@@ -3,7 +3,7 @@
 layout: col-sidebar 
 title: OWASP Secure Logging Benchmark 
 site_side: true
-tags: logging-benchmark logging monitoring forensics dfir
+tags: logging-benchmark
 project: true 
 level: 2 
 type: documentation
@@ -12,7 +12,7 @@ type: documentation
 
 ## Introduction:
 
-The information that is often written in the log may be sensitive in nature or give an attacker access to low hanging
+The information that is often written in the log may be sensitive in nature or give an attacker access to low-hanging
 fruit in terms of exposure of endpoints or other sensitive information. The OWASP in the Top 10 refers to “Sensitive
 Data Exposure” as one of the risk factors for any application. Logging of information can be beneficial but this is
 often a double ended sword. Developers design logs with debugging in mind. Application logs are designed by developers
@@ -25,7 +25,7 @@ that is logged has little to no context or information surrounding an event. Whe
 should be consideration taken to not only log what is important to developers but to consider and be kind to the future
 forensicator tasked with reading your logs. Logs which are messy and noisy are often the result of not clean code. When
 this occurs you have instances where log levels have not been adequately set and data inappropriately tagged and leaked
-within production logs. There should be thought placed into your logs and the information you put into them. There
+within production logs. There should be thought placed into your logs, and the information you put into them. There
 should be clear attention given to prevent sensitive data disclosure by building in controls.
 
 ## Project Overview:
