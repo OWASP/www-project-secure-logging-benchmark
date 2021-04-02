@@ -9,4 +9,4 @@ security and forensics capabillities within the development cycle. This project 
 consider within designing the logging that is best for your application. It includes a Benchmarking tool which is still
 in development to rate your logs in terms of maturity in terms of system monitoring, performance metrics, forensic
 information and even deductables for sensitive data disclosure. The aim is to empower developers to better develop logs
-with future breaches in mind. This is not a silver bullet but a tool to guiding how you think and approach logs.
+with future breaches in mind. This is not a silver bullet, but a tool to guiding how you think and approach logs.

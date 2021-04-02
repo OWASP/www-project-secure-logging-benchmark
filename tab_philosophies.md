@@ -1,9 +1,11 @@
 ---
+
 title: The Five Philosophies 
-layout:  null
+layout: null
 tab: true
 order: 2
 tags: philosophies
+
 ---
 
 ## There are five philosophies in designing logs
@@ -117,7 +119,7 @@ information that an attacker might want to have access to.
 
 These are by no means the only things to consider, and I could potentially write a book or two about my thoughts. I have
 dealt with teams who have suffered a compromise and had sensitive data disclosures. In my experience I have almost
-always used the logs, they can contain so much information or they can contain equal amounts of noise. I am on a
+always used the logs, they can contain so much information, or they can contain equal amounts of noise. I am on a
 crusade, to turn developers into ninja forensic coding logging forces of nature. I would like to deal with breaches in
 which care has been taken with the logs they produce, and not always mumble to my “It would have been nice to have
 better logs or any logs for that matter”. It is easy to ask yourself the question as a developer. Do you take into
