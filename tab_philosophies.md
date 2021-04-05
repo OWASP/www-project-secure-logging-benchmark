@@ -1,11 +1,10 @@
 ---
-
-title: The Five Philosophies
+title: philosophies
+displaytext: The Five Philosophies
 layout: null
 tab: true
 order: 2
-tags: philosophies
-
+tags: logging-benchmark
 ---
 
 ## There are five philosophies in designing logs
