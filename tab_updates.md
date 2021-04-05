@@ -1,11 +1,10 @@
 ---
-
-title: Status Update
+title: update
+displaytext: Status Update
 layout: null
 tab: true
 order: 3
-tags: update
-
+tags: logging-benchmark
 ---
 
 ## Update 04 March 2020
