@@ -4,7 +4,7 @@ displaytext: Status Update
 layout: null
 tab: true
 order: 1
-tags: update
+tags: logging-benchmark
 ---
 
 ## Update 04 March 2020
