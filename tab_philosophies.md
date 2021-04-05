@@ -1,9 +1,9 @@
 ---
 
-title: The Five Philosophies 
-layout: null 
-tab: true 
-order: 2 
+title: The Five Philosophies
+layout: null
+tab: true
+order: 2
 tags: philosophies
 
 ---
@@ -44,20 +44,24 @@ is to be in a position to tag your data strings. There are many ways to do it bu
 developer documentation explains it well. Have your data privacy levels set by determining what information should be
 printed in logs.
 
-> // Make the smoothie name visible because it’s not sensitive data.
->
->    Logger().info("Smoothie name: \(smoothieName, privacy: .public)")
+```
+// Make the smoothie name visible because it’s not sensitive data.
 
-Generating Log Messages from Your Code | Apple Developer Documentation
+Logger().info("Smoothie name: \(smoothieName, privacy: .public)")
+```
+
+[Generating Log Messages from Your Code / Apple Developer Documentation](https://developer.apple.com/documentation/os/logging/generating_log_messages_from_your_code)
 
 When you know a variable contains potentially sensitive user information, mark it as secret explicitly, as shown in the
 following simple example:
 
-> let userPassw : Str = getUserPassw()
->
-> // Hide the user’s password.
->
-> Logger().info("User’s Password: \(userPassw, privacy: .secret)")
+```
+let userPassw : Str = getUserPassw()
+
+// Hide the user’s password.
+
+Logger().info("User’s Password: \(userPassw, privacy: .secret)")
+```
 
 Building in the controls required to identify what type of information your variables may contain gives you the power to
 set the rules about when they are or can be, disclosed. Obviously, there is information that you would need in debug
@@ -75,10 +79,12 @@ expanding applications, you will accumulate useless logs or logging debt. This i
 turned into a sea of useless information, that has no real value. Logging should be something that is considered and
 cleaned as an application grows. This is also something that should be considered as part of a sprint cycle – time to
 deal with the gremlins that pop up along the way. Shooting a moving target is much harder than perhaps keeping it
-simple, structured, and clean. Uncle Bob states that we should aim for clean code, I would like to take these wise words
-and take them a step further. "Clean code produces clean logs". Logs can save you or doom you. Test your logs by means
-of benchmarking them regularly. These tests could be part of unit testing or, at the very least, a part of quality
-assurance during mainline merges. It is something we should all be doing at regular intervals.
+simple, structured, and clean. [Uncle Bob](https://www.youtube.com/watch?v=8SMOB6k3hkM) states that we should aim for
+clean code, I would like to take these wise words and take them a step further. "Clean code produces clean logs". Logs
+can save you or doom you. Test your logs by means
+of [benchmarking](https://owasp.org/www-project-secure-logging-benchmark/) them regularly. These tests could be part of
+unit testing or, at the very least, a part of quality assurance during mainline merges. It is something we should all be
+doing at regular intervals.
 
 ### 4. The fourth philosophy: Assume that at some point you will suffer a compromise; log accordingly
 
@@ -102,33 +108,34 @@ disclose data, but you can build in the capabilities to detect these faster befo
 around you. Build your logs to obtain actionable information, that indicates when your vulnerable areas are not behaving
 properly. Know what behavior is normal in your environment, to be in a position to identify what could be evil.
 
-### 5. The fifth (and final) philosophy: Consider who has access to the logs, how they are stored, and how they are transported.
+### 5. The fifth (and final) philosophy: Consider who has access to the logs, how they are stored, and how they are transported
 
 Ultimately trust no device, no system, and no method of transmission. In multiple breaches I have dealt with there has
 been an unreasonable amount of trust placed in the "fact" that devices can be trusted – to some degree, this being said
 applications that run on physical devices must (usually) retain logs in some way or form on the local device. This is
-something that in forensics we are familiar with, the Locard exchange principle. Often if that device is a user’s mobile
-device or laptop, the organisation that developed the application does not have control over that device and its
-storage. There should never be any information in the logs that can be used to derive additional information about how
-the application functions, authenticates, or endpoints it communicates with. Consider this as having an asset behind
-enemy lines. This information has to cross multiple trust barriers and ultimately would be hopefully ingested into a
-central data lake. The question I always consider is, should we still just trust that the data can contain sensitive
-information because it’s stored on our data lake within our control? The simple answer is no, logs should contain enough
-information, to debug, to point to additional sources of information and what potentially occurred. It should not
-contain all the elements that may be considered sensitive. Could there be pointers to additional places the same
-information could be found, that makes it a little harder. In actual fact, even developers or security should not have
-access to sensitive data either. Many breaches occur because we assign a high level of trust to internal services and
-members of the organisations. Many breaches occur from within, not necessarily from outside. Logs contain valuable
+something that in forensics we are familiar with,
+the [Locard exchange principle](https://en.wikipedia.org/wiki/Locard%27s_exchange_principle). Often if that device is a
+user’s mobile device or laptop, the organisation that developed the application does not have control over that device
+and its storage. There should never be any information in the logs that can be used to derive additional information
+about how the application functions, authenticates, or endpoints it communicates with. Consider this as having an asset
+behind enemy lines. This information has to cross multiple trust barriers and ultimately would be hopefully ingested
+into a central data lake. The question I always consider is, should we still just trust that the data can contain
+sensitive information because it’s stored on our data lake within our control? The simple answer is no, logs should
+contain enough information, to debug, to point to additional sources of information and what potentially occurred. It
+should not contain all the elements that may be considered sensitive. Could there be pointers to additional places the
+same information could be found, that makes it a little harder. In actual fact, even developers or security should not
+have access to sensitive data either. Many breaches occur because we assign a high level of trust to internal services
+and members of the organisations. Many breaches occur from within, not necessarily from outside. Logs contain valuable
 information that an attacker might want to have access to.
 
 These are by no means the only things to consider, and I could potentially write a book or two about my thoughts. I have
 dealt with teams who have suffered a compromise and had sensitive data disclosures. In my experience I have almost
 always used the logs, they can contain so much information, or they can contain equal amounts of noise. I am on a
 crusade, to turn developers into ninja forensic coding logging forces of nature. I would like to deal with breaches in
-which care has been taken with the logs they produce, and not always mumble to my "It would have been nice to have
-better logs or any logs for that matter". It is easy to ask yourself the question as a developer. Do you take into
-account that your application will be breached, do you have enough information to determine what happened?" If you
-answered "I do not know" or "No". Reach out to me I would like to set you on the path of building forensic and breach
+which care has been taken with the logs they produce, and not always mumble to my "*It would have been nice to have
+better logs or any logs for that matter*". It is easy to ask yourself the question as a developer. Do you take into
+account that your application will be breached, do you have enough information to determine what happened? If you
+answered "*I do not know*" or "*No*". Reach out to me I would like to set you on the path of building forensic and breach
 readiness into your application logs.
 
 A special thanks to Eric, who debated these with me. Also, all the wizards and developers guided me on this path.

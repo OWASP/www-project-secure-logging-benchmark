@@ -1,16 +1,16 @@
 ---
 
-layout: col-sidebar 
-title: OWASP Secure Logging Benchmark 
+layout: col-sidebar
+title: OWASP Secure Logging Benchmark
 site_side: true
 tags: logging-benchmark
-project: true 
-level: 2 
+project: true
+level: 2
 type: documentation
 
 ---
 
-## Introduction:
+## Introduction
 
 The information that is often written in the log may be sensitive in nature or give an attacker access to low-hanging
 fruit in terms of exposure of endpoints or other sensitive information. The OWASP in the Top 10 refers to "Sensitive
@@ -28,7 +28,8 @@ this occurs you have instances where log levels have not been adequately set and
 within production logs. There should be thought placed into your logs, and the information you put into them. There
 should be clear attention given to prevent sensitive data disclosure by building in controls.
 
-## Project Overview:
+### Project Overview
+
 A benchmarking for application logs that are based on the NIST Security Controls taking into account debugging and
 system performance.
 
