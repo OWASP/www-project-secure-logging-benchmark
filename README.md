@@ -1,3 +1,5 @@
+This project has been archived. The content remains accessible for historical context.
+
 The home of the OWASP Secure Logging Benchmark project which can be found
 at: [www-project-secure-logging-benchmark](https://owasp.org/www-project-secure-logging-benchmark/).
 
