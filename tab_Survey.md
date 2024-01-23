@@ -1,3 +1,11 @@
+---
+title: Survey
+layout: null
+tab: true
+order: 2
+tags: cc
+---
+
 # :clipboard: Participate in Our Survey: Shaping the Future of Logging Culture in Software Development
 
 ## :star: Your Insight is Invaluable
