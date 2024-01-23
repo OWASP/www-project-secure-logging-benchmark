@@ -1,6 +1,9 @@
+---
+title: Philosophies
 tab: true
 order: 2
 tags: cc
+---
 # The Five Philosophies of Log Design
 
 *TL;DR*: Effective logs should be simple, structured, and informative without compromising sensitive information. Avoid accidental data exposure to prevent security breaches.
