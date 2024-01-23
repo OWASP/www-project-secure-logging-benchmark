@@ -3,7 +3,7 @@ title: philosophies
 displaytext: Philosophies
 layout: null
 tab: true
-order: 3
+order: 2
 tags: philosophies
 ---
 # The Five Philosophies of Log Design
