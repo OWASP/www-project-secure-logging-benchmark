@@ -1,9 +1,10 @@
 ---
-title: Survey
+title: survey
+displaytext: Survey
 layout: null
 tab: true
-order: 4
-tags: cc
+order: 3
+tags: benchmark-survey
 ---
 
 # Participate in Our Survey: Shaping the Future of Logging Culture in Software Development
