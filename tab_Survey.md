@@ -15,7 +15,7 @@ As part of my doctoral research, I am conducting a comprehensive survey aimed at
 
 # Why Your Participation Matters
 
-> **Note:** Your participation is not just a response to a survey; it is a pivotal contribution that will influence the direction of this important project. The insights gathered from this survey will directly impact my PhD research, helping to develop strategies and best practices that could redefine our approach to logging in software development.
+**Note:** Your participation is not just a response to a survey; it is a pivotal contribution that will influence the direction of this important project. The insights gathered from this survey will directly impact my PhD research, helping to develop strategies and best practices that could redefine our approach to logging in software development.
 
 ### Survey Details
 
