@@ -4,7 +4,7 @@ displaytext: Survey
 layout: null
 tab: true
 order: 3
-tags: benchmark-survey
+tags: logging-benchmark
 ---
 
 # Participate in Our Survey: Shaping the Future of Logging Culture in Software Development
