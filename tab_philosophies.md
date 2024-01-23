@@ -4,7 +4,7 @@ displaytext: Philosophies
 layout: null
 tab: true
 order: 2
-tags: philosophies
+tags: logging-benchmark
 ---
 # The Five Philosophies of Log Design
 
