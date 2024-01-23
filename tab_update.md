@@ -3,7 +3,7 @@ title: update
 displaytext: Status Update
 layout: null
 tab: true
-order: 3
+order: 1
 tags: logging-benchmark
 ---
 
