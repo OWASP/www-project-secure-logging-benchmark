@@ -25,6 +25,6 @@ The survey covers various aspects of logging practices, challenges, and the over
 
 To be a part of this transformative study, please follow the link below to the survey. Your responses will be treated with the utmost confidentiality and will only be used for the purposes of this research.
 
-[Take the Survey](https://www.questionpro.com/a/SurveyPreview)
+[Take the Survey](https://veronicaschmitt.questionpro.com/a/TakeSurvey?tt=duf7q2d7OMoECHrPeIW9eQ%3D%3D)
 
 Thank you for your time and valuable contribution to this research. Together, we can pave the way for better logging practices in software development.
