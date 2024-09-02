@@ -1,3 +1,3 @@
 ### Leaders
 
-* [Veronica Schmitt](mailto:veronica.schmitt@noroff.no)
+* [Veronica Schmitt](mailto:veronica.schmitt@owasp.org)
