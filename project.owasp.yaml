@@ -1,0 +1,20 @@
+audience:
+  - breaker
+  - builder
+leaders:
+  - name: Veronica Schmitt
+    email: veronica.schmitt@owasp.org
+    github: Velandra666
+level: 2
+name: OWASP Secure Logging Benchmark
+pitch: Description for OWASP Secure Logging Benchmark
+repositories:
+  - name: www-project-secure-logging-benchmark
+    url: https://github.com/OWASP/www-project-secure-logging-benchmark
+    description: OWASP Observability Project
+tags:
+  - logging-benchmark
+  - custom-tag-1
+  - custom-tag-2
+type: documentation
+website: https://owasp.org/www-project-secure-logging-benchmark
