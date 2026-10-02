@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 304" width="820" height="304" font-family="Helvetica, Arial, sans-serif">
+<rect width="820" height="304" fill="#ffffff"/>
+<text x="20" y="32" font-size="18" font-weight="bold" fill="#1f3a5f">Developer priorities when designing logs</text>
+<text x="318" y="73" font-size="14" fill="#1d2733" text-anchor="end">Readability and clarity for developers</text>
+<rect x="330" y="59" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="59" width="360.0" height="20" fill="#c8102e"/>
+<text x="700" y="74" font-size="14" fill="#1d2733">79.0% (113)</text>
+<text x="318" y="107" font-size="14" fill="#1d2733" text-anchor="end">Protection of sensitive information</text>
+<rect x="330" y="93" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="93" width="245.6" height="20" fill="#1f3a5f"/>
+<text x="700" y="108" font-size="14" fill="#1d2733">53.9% (77)</text>
+<text x="318" y="141" font-size="14" fill="#1d2733" text-anchor="end">Compliance with industry regulations</text>
+<rect x="330" y="127" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="127" width="178.6" height="20" fill="#1f3a5f"/>
+<text x="700" y="142" font-size="14" fill="#1d2733">39.2% (56)</text>
+<text x="318" y="175" font-size="14" fill="#1d2733" text-anchor="end">User activity tracking for analytics</text>
+<rect x="330" y="161" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="161" width="169.1" height="20" fill="#1f3a5f"/>
+<text x="700" y="176" font-size="14" fill="#1d2733">37.1% (53)</text>
+<text x="318" y="209" font-size="14" fill="#1d2733" text-anchor="end">Storage efficiency</text>
+<rect x="330" y="195" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="195" width="121.2" height="20" fill="#1f3a5f"/>
+<text x="700" y="210" font-size="14" fill="#1d2733">26.6% (38)</text>
+<text x="318" y="243" font-size="14" fill="#1d2733" text-anchor="end">Other</text>
+<rect x="330" y="229" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="229" width="41.5" height="20" fill="#1f3a5f"/>
+<text x="700" y="244" font-size="14" fill="#1d2733">9.1% (13)</text>
+<text x="20" y="288" font-size="12" fill="#5b6673">Multiple selections allowed.</text></svg>

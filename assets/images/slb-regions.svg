@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 170" width="820" height="170" font-family="Helvetica, Arial, sans-serif">
+<rect width="820" height="170" fill="#ffffff"/>
+<text x="20" y="32" font-size="18" font-weight="bold" fill="#1f3a5f">Respondents by region</text>
+<rect x="20.0" y="52" width="326.8" height="30" fill="#1f3a5f"/>
+<rect x="346.8" y="52" width="279.2" height="30" fill="#4f6d8f"/>
+<rect x="626.1" y="52" width="71.8" height="30" fill="#c8102e"/>
+<rect x="697.8" y="52" width="49.9" height="30" fill="#8ea3ba"/>
+<rect x="747.7" y="52" width="30.4" height="30" fill="#c3ceda"/>
+<rect x="778.2" y="52" width="21.8" height="30" fill="#e3e8ee"/>
+<rect x="20" y="98" width="14" height="14" fill="#1f3a5f" stroke="#c3ceda"/>
+<text x="42" y="110" font-size="14" fill="#1d2733">Europe 41.9%</text>
+<rect x="285" y="98" width="14" height="14" fill="#4f6d8f" stroke="#c3ceda"/>
+<text x="307" y="110" font-size="14" fill="#1d2733">North America 35.8%</text>
+<rect x="550" y="98" width="14" height="14" fill="#c8102e" stroke="#c3ceda"/>
+<text x="572" y="110" font-size="14" fill="#1d2733">Africa 9.2%</text>
+<rect x="20" y="126" width="14" height="14" fill="#8ea3ba" stroke="#c3ceda"/>
+<text x="42" y="138" font-size="14" fill="#1d2733">Asia-Pacific 6.4%</text>
+<rect x="285" y="126" width="14" height="14" fill="#c3ceda" stroke="#c3ceda"/>
+<text x="307" y="138" font-size="14" fill="#1d2733">Other 3.9%</text>
+<rect x="550" y="126" width="14" height="14" fill="#e3e8ee" stroke="#c3ceda"/>
+<text x="572" y="138" font-size="14" fill="#1d2733">Unknown 2.8%</text>
+</svg>

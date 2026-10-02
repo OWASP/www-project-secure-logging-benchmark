@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 406" width="820" height="406" font-family="Helvetica, Arial, sans-serif">
+<rect width="820" height="406" fill="#ffffff"/>
+<text x="20" y="32" font-size="18" font-weight="bold" fill="#1f3a5f">Logging vulnerabilities encountered</text>
+<text x="318" y="73" font-size="14" fill="#1d2733" text-anchor="end">Insufficient logging</text>
+<rect x="330" y="59" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="59" width="360.0" height="20" fill="#c8102e"/>
+<text x="700" y="74" font-size="14" fill="#1d2733">46.1%</text>
+<text x="318" y="107" font-size="14" fill="#1d2733" text-anchor="end">Logging of sensitive information</text>
+<rect x="330" y="93" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="93" width="344.4" height="20" fill="#1f3a5f"/>
+<text x="700" y="108" font-size="14" fill="#1d2733">44.1%</text>
+<text x="318" y="141" font-size="14" fill="#1d2733" text-anchor="end">Information disclosure</text>
+<rect x="330" y="127" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="127" width="336.6" height="20" fill="#1f3a5f"/>
+<text x="700" y="142" font-size="14" fill="#1d2733">43.1%</text>
+<text x="318" y="175" font-size="14" fill="#1d2733" text-anchor="end">Authentication information in logs</text>
+<rect x="330" y="161" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="161" width="275.7" height="20" fill="#1f3a5f"/>
+<text x="700" y="176" font-size="14" fill="#1d2733">35.3%</text>
+<text x="318" y="209" font-size="14" fill="#1d2733" text-anchor="end">Log4j</text>
+<rect x="330" y="195" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="195" width="183.5" height="20" fill="#1f3a5f"/>
+<text x="700" y="210" font-size="14" fill="#1d2733">23.5%</text>
+<text x="318" y="243" font-size="14" fill="#1d2733" text-anchor="end">Blocking or overloading logging systems</text>
+<rect x="330" y="229" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="229" width="130.4" height="20" fill="#1f3a5f"/>
+<text x="700" y="244" font-size="14" fill="#1d2733">16.7%</text>
+<text x="318" y="277" font-size="14" fill="#1d2733" text-anchor="end">Other</text>
+<rect x="330" y="263" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="263" width="130.4" height="20" fill="#1f3a5f"/>
+<text x="700" y="278" font-size="14" fill="#1d2733">16.7%</text>
+<text x="318" y="311" font-size="14" fill="#1d2733" text-anchor="end">Log poisoning</text>
+<rect x="330" y="297" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="297" width="92.1" height="20" fill="#1f3a5f"/>
+<text x="700" y="312" font-size="14" fill="#1d2733">11.8%</text>
+<text x="318" y="345" font-size="14" fill="#1d2733" text-anchor="end">Token revocation and sensitive information</text>
+<rect x="330" y="331" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="331" width="68.7" height="20" fill="#1f3a5f"/>
+<text x="700" y="346" font-size="14" fill="#1d2733">8.8%</text>
+<text x="20" y="390" font-size="12" fill="#5b6673">n = 102 respondents, multiple selections allowed.</text></svg>

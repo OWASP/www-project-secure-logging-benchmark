@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 236" width="820" height="236" font-family="Helvetica, Arial, sans-serif">
+<rect width="820" height="236" fill="#ffffff"/>
+<text x="20" y="32" font-size="18" font-weight="bold" fill="#1f3a5f">Training in privacy and security logging</text>
+<text x="318" y="73" font-size="14" fill="#1d2733" text-anchor="end">No training</text>
+<rect x="330" y="59" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="59" width="360.0" height="20" fill="#c8102e"/>
+<text x="700" y="74" font-size="14" fill="#1d2733">64.3%</text>
+<text x="318" y="107" font-size="14" fill="#1d2733" text-anchor="end">Privacy and security</text>
+<rect x="330" y="93" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="93" width="140.0" height="20" fill="#1f3a5f"/>
+<text x="700" y="108" font-size="14" fill="#1d2733">25.0%</text>
+<text x="318" y="141" font-size="14" fill="#1d2733" text-anchor="end">Privacy only</text>
+<rect x="330" y="127" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="127" width="44.8" height="20" fill="#1f3a5f"/>
+<text x="700" y="142" font-size="14" fill="#1d2733">8.0%</text>
+<text x="318" y="175" font-size="14" fill="#1d2733" text-anchor="end">Security only</text>
+<rect x="330" y="161" width="360" height="20" fill="#e9edf2"/>
+<rect x="330" y="161" width="33.0" height="20" fill="#1f3a5f"/>
+<text x="700" y="176" font-size="14" fill="#1d2733">5.9%</text>
+<text x="20" y="220" font-size="12" fill="#5b6673">n = 153 respondents.</text></svg>
