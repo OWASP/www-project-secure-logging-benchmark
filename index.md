@@ -11,9 +11,9 @@ tags: logging-benchmark
 
 ## Information
 
-- [Incubator Project](#)
-- [Builder](#)
-- [Breaker](#)
+[![OWASP Incubator](https://img.shields.io/badge/owasp-incubator%20project-53AAE5.svg)](https://owasp.org/projects/)
+[![OWASP Builders](https://img.shields.io/badge/owasp-builders-blue.svg)](https://owasp.org/projects/)
+[![OWASP Breakers](https://img.shields.io/badge/owasp-breakers-red.svg)](https://owasp.org/projects/)
 
 ## Downloads or Social Links
 
@@ -21,20 +21,30 @@ tags: logging-benchmark
 
 ## Introduction
 
-The information that is often written in the log may be sensitive in nature or give an attacker access to low-hanging fruit in terms of exposure of endpoints or other sensitive information. The OWASP in the Top 10 refers to "Sensitive Data Exposure" as one of the risk factors for any application. Logging of information can be beneficial but this is often a double-ended sword. Developers design logs with debugging in mind. Application logs are designed by developers for developers. There are important components to have a secure standard of logging. There is great power within logging and taking into account designing your logs with future breaches in mind. "When nothing goes right, just go left". The process of detecting or dealing with an incident relies heavily on having the information built into the application logs prior to an incident occurring. The biggest pitfall of dealing with a potential breach is that your logging is verbose and critical data is lost between the noise or logs are overwritten. Another extreme is that the information that is logged has little to no context or information surrounding an event. When designing application logs there should be consideration taken to not only log what is important to developers but to consider and be kind to the future forensicator tasked with reading your logs. Logs which are messy and noisy are often the result of not clean code. When this occurs you have instances where log levels have not been adequately set and data inappropriately tagged and leaked within production logs. There should be thought placed into your logs, and the information you put into them. There should be clear attention given to prevent sensitive data disclosure by building in controls.
+Application logs often contain sensitive information, or expose details such as internal endpoints that give an attacker easy targets. The OWASP Top 10 (2021) recognises this risk under A02 Cryptographic Failures (formerly Sensitive Data Exposure) and A09 Security Logging and Monitoring Failures. Logging is valuable, but it is a double-edged sword.
+
+Developers usually design logs for debugging, and for other developers. A secure logging standard treats logs as security and forensic artefacts as well. Detecting and responding to an incident depends heavily on the information that was built into the application logs before the incident occurred.
+
+Two failure modes are common. In the first, logging is so verbose that critical events are lost in the noise, or are overwritten before anyone reads them. In the second, events are logged with little or no context, so they cannot be interpreted. Logs should therefore be designed not only for developers, but also for the forensic analyst who will one day need to reconstruct what happened.
+
+Messy, noisy logs are often a symptom of unclean code: log levels are not set correctly, data is tagged inappropriately, and sensitive values leak into production logs. Deliberate log design, with controls built in to prevent sensitive data disclosure, avoids these problems.
 
 ## Project Overview
 
-A benchmarking for application logs that are based on the NIST Security Controls taking into account debugging and system performance.
+The project provides a benchmark for application logs based on NIST SP 800-53 security controls, in particular the Audit and Accountability (AU) family, while taking debugging needs and system performance into account. It covers:
 
 - Log levels and what they mean
-- Event categories and why they are important
-- Classification of data and preventions of sensitive data disclosure
-- Logging Structure
-- Content within log messages and identifying weaknesses within these
-- Building in forensic readiness within application logs
+- Event categories and why they matter
+- Data classification and prevention of sensitive data disclosure
+- Log structure
+- Log message content and how to identify weaknesses in it
+- Building forensic readiness into application logs
 - Log hygiene and analysis techniques
-- Two weeks of training material that you can use to populate logging hygiene backlogs items to address within sprints.
-- A guide on how to apply this within your application security team.
+- Two weeks of training material for populating logging hygiene backlog items to address within sprints
+- A guide to applying the benchmark within an application security team
 
-This project is a movement more than it is a standard. Logs are for more than just debugging and system metrics. They give insights into code quality and can be a symptom of problems within development teams. They are crucial to understanding a breach, mitigation against breaches, and information gathering for threat modeling.
+The survey research behind the benchmark is summarised in the Research tab.
+
+## Why It Matters
+
+This project is a movement as much as it is a standard. Logs are for more than debugging and system metrics. They give insight into code quality and can reveal problems within development teams. They are essential for understanding a breach, mitigating future breaches, and gathering information for threat modelling.
