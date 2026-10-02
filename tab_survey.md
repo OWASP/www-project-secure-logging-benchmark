@@ -1,30 +1,72 @@
 ---
 title: survey
-displaytext: Survey
+displaytext: Survey Results
 layout: null
 tab: true
 order: 3
 tags: logging-benchmark
 ---
 
-# Participate in Our Survey: Shaping the Future of Logging Culture in Software Development
+## Survey Results: Logging Culture in Software Development
 
-# Your Insight is Invaluable
+The survey on logging culture in software development is now closed. It ran from 12 December 2023 to 31 December 2024 as part of doctoral research at the University of Plymouth, and 146 participants completed it. Thank you to everyone who took part and shared it with colleagues.
 
-As part of my doctoral research, I am conducting a comprehensive survey aimed at understanding and enhancing the logging culture within the realm of software development. This survey presents a unique opportunity for professionals like you to share insights and experiences that are crucial in shaping the future of how we approach logging in software development.
+Developers working on software and firmware were recruited through OWASP and Health-ISAC. They answered questions on logging priorities, training, standards, retention, and the vulnerabilities they have encountered. Their responses were compared against the OWASP Top 10 (2021) dataset and logging-related CWEs, and the findings form the basis of this benchmark.
 
-# Why Your Participation Matters
+### Key findings
 
-**Note:** Your participation is not just a response to a survey; it is a pivotal contribution that will influence the direction of this important project. The insights gathered from this survey will directly impact my PhD research, helping to develop strategies and best practices that could redefine our approach to logging in software development.
+| Finding | Respondents |
+|---|---|
+| Received no training in privacy or security logging | 64% |
+| Work without documented logging guidelines | 60% |
+| Struggled to investigate incidents because logs were missing or incomplete | 45% |
+| Found passwords, tokens, API keys or PII in log files | 33%+ |
 
-### Survey Details
+### What developers prioritise when designing logs
 
-The survey covers various aspects of logging practices, challenges, and the overall impact of logging on software development processes. It is designed to be both insightful for participants and instrumental in gathering meaningful data.
+Readability for developers dominates. Just over half of respondents cite protection of sensitive information, and fewer than four in ten cite regulatory compliance.
 
-### How to Participate
+![Developer priorities when designing logs](assets/images/slb-design-priorities.svg)
 
-To be a part of this transformative study, please follow the link below to the survey. Your responses will be treated with the utmost confidentiality and will only be used for the purposes of this research.
+### Training in secure and privacy-compliant logging
 
-[Take the Survey](https://veronicaschmitt.questionpro.com/a/TakeSurvey?tt=duf7q2d7OMoECHrPeIW9eQ%3D%3D)
+Most developers learn logging through ad hoc guidance or personal experience. Only a quarter have been trained in both the privacy and the security aspects of logging.
 
-Thank you for your time and valuable contribution to this research. Together, we can pave the way for better logging practices in software development.
+![Training in privacy and security logging](assets/images/slb-training.svg)
+
+### Logging vulnerabilities developers have encountered
+
+Over 40% of respondents report each of insufficient logging, sensitive data in logs, and information disclosure. These correspond to CWE-778, CWE-532 and CWE-200.
+
+![Logging vulnerabilities encountered](assets/images/slb-vulnerabilities.svg)
+
+### Findings mapped to known weaknesses
+
+| Finding | Weakness | Consequence |
+|---|---|---|
+| Security-critical events such as failed logins and privilege changes are not recorded | CWE-778 Insufficient Logging; OWASP A09:2021 | Incidents cannot be detected or reconstructed |
+| Credentials, tokens, API keys and PII written to logs | CWE-532 Insertion of Sensitive Information into Log File | Logs become a target and a regulatory liability |
+| Excessive or unnecessary detail logged | CWE-200 Exposure of Sensitive Information | Unintended disclosure to anyone with log access |
+| Unvalidated input written to log entries | CWE-117 Improper Output Neutralization for Logs | Forged or misleading entries obscure the forensic trail |
+| Security context omitted from entries | CWE-223 Omission of Security-relevant Information | Events cannot be attributed or correlated |
+
+### Who responded
+
+![Respondents by region](assets/images/slb-regions.svg)
+
+![Highest education level of respondents](assets/images/slb-education.svg)
+
+### Design requirements for forensic-ready logging
+
+The survey findings lead to six design input requirements, which form the basis of the benchmark.
+
+1. The system shall generate logs in a structured and consistent format to enable reliable parsing, correlation and long-term forensic usability.
+2. The system shall record security-relevant events, including authentication attempts, access to sensitive data, privilege changes and system configuration modifications.
+3. The system shall enrich each log entry with contextual metadata.
+4. The system shall exclude sensitive data from the logs.
+5. The system shall, where feasible, synchronise all timestamps using a trusted time source such as NTP. Where this is not possible, event sequencing shall be preserved through relative timestamps or monotonic counters.
+6. The system shall cryptographically bind each log entry to its contents and its predecessor, for example through hashing or chained signatures, so that individual entries are tamper-evident.
+
+### Citation
+
+Schmitt, V., Clarke, N., Ghita, B. and Van Niekerk, J. *A Structured Approach to Log Design: Addressing Security and Compliance Gaps in Software Development.* University of Plymouth and Noroff University College.
