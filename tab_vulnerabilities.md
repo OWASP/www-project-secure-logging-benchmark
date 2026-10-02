@@ -1,4 +1,4 @@
-# Logging Vulnerabilities
+## Logging Vulnerabilities
 
 ## Overview
 
