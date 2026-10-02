@@ -7,18 +7,6 @@ layout: col-sidebar
 tags: logging-benchmark
 ---
 
-# OWASP Secure Logging Benchmark
-
-## Information
-
-[![OWASP Incubator](https://img.shields.io/badge/owasp-incubator%20project-53AAE5.svg)](https://owasp.org/projects/)
-[![OWASP Builders](https://img.shields.io/badge/owasp-builders-blue.svg)](https://owasp.org/projects/)
-[![OWASP Breakers](https://img.shields.io/badge/owasp-breakers-red.svg)](https://owasp.org/projects/)
-
-## Downloads or Social Links
-
-- [Blog](https://veronica-schmitt.com/category/blog-posts/)
-
 ## Introduction
 
 Application logs often contain sensitive information, or expose details such as internal endpoints that give an attacker easy targets. The OWASP Top 10 (2021) recognises this risk under A02 Cryptographic Failures (formerly Sensitive Data Exposure) and A09 Security Logging and Monitoring Failures. Logging is valuable, but it is a double-edged sword.
@@ -43,7 +31,7 @@ The project provides a benchmark for application logs based on NIST SP 800-53 se
 - Two weeks of training material for populating logging hygiene backlog items to address within sprints
 - A guide to applying the benchmark within an application security team
 
-The survey research behind the benchmark is summarised in the Research tab.
+The survey research behind the benchmark is summarised in the Survey Results tab, and common logging weaknesses are described in the Vulnerabilities tab.
 
 ## Why It Matters
 
